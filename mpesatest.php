@@ -78,6 +78,8 @@ xmlns:req='.$url.'>
 </soapenv:Body>
 </soapenv:Envelope>
 ';
+
+
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: text/xml'));
 curl_setopt($ch, CURLOPT_POST, 1);
@@ -85,7 +87,5 @@ curl_setopt($ch, CURLOPT_POSTFIELDS, "$xml_data");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 $output = curl_exec($ch);
 curl_close($ch);
-
-
-file_put_contents("~/result.txt", $output);
+file_put_contents("result.txt", $output);
 ?>
