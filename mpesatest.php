@@ -1,9 +1,10 @@
 <?php
 $url = "http://192.168.9.48:8310/mminterface/request/";
-$xml_data = '
+
+$xml_data = 
 <soapenv:Envelope 
 xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" 
-xmlns:req='.$url.'>
+xmlns:req=$url>
 <soapenv:Header>
 <tns:RequestSOAPHeader xmlns:tns="http://www.huawei.com.cn/schema/common/v2_1">
 <tns:spId>107031</tns:spId> 
@@ -77,7 +78,7 @@ xmlns:req='.$url.'>
 </request>]]></req:RequestMsg>
 </soapenv:Body>
 </soapenv:Envelope>
-';
+;
 
 
 $ch = curl_init($url);
