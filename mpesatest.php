@@ -2,80 +2,84 @@
 $url = "http://192.168.9.48:8310/mminterface/request/";
 
 $xml_data = '
-<soapenv:Envelope 
-xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" 
-xmlns:req=$url>
+<soapenv:Envelope
+xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+xmlns:req="http://192.168.9.48:8310/mminterface/request">
+<!--soap header-->
 <soapenv:Header>
-<tns:RequestSOAPHeader xmlns:tns="http://www.huawei.com.cn/schema/common/v2_1">
-<tns:spId>107031</tns:spId> 
-//SPid, provided by us
-<tns:spPassword>N2ViMGViMGIxMWExMjE4YzlkNjRlZDlkZDQ2ODA4YTdhMWRjZmUzZDc4ZTJiMTMxZDFiYTBjNDdjZWZhM2ZlYg==</tns:spPassword> 
-//Password, provided by us. Encrypted using Base64(sha256(SPid+Password+Timestamp))
-<tns:serviceId>107031000</tns:serviceId> //Service id, provided by us
-<tns:timeStamp>20190809145501</tns:timeStamp> //Timestamp, in format yyyymmddhhmmss
-</tns:RequestSOAPHeader>
+
+    <tns:RequestSOAPHeader xmlns:tns="http://www.huawei.com.cn/schema/common/v2_1">
+        <tns:spId>107031</tns:spId>
+        <tns:spPassword>ZGVjMGI0Nzg4YzhiMTIwZGIxNmFiODFlMDFhYTAwMGUyZTc5ZjY4OWMxOTQwMThiMDZlNTgyMDQ0MWI4ZDdmMQ==</tns:spPassword>
+        <tns:serviceId>107031000<tns:serviceId>
+        <tns:timeStamp>20190809160101</tns:timeStamp>
+    </tns:RequestSOAPHeader>
 </soapenv:Header>
+
+<!--soap body-->
 <soapenv:Body>
-<req:RequestMsg><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<request xmlns='.$url.'>
-<Transaction>
-<CommandID>PromotionPayment</CommandID> //The command id for a b2c. You can use PromotionPayment or BusinessPayment.
-<LanguageCode></LanguageCode>
-<OriginatorConversationID>001</OriginatorConversationID> //This is unique to every request
-<ConversationID> </ConversationID>
-<Remark> </Remark>
-<Parameters>
-<Parameter>
-<Key>Amount</Key>
-<Value>1</Value> //Amount
-</Parameter>
-<Parameter>
-<Key>Key1</Key> //Constant variable, remains the same
-<Value>Value1</Value> //Constant variable, remains the same
-</Parameter>
-</Parameters>
-<ReferenceData>
-<ReferenceItem>
-<Key>QueueTimeoutURL</Key> // Your queue timeout url
-<Value>http://10.66.49.789:7888/new</Value>
-</ReferenceItem>
-<ReferenceItem>
-<Key>Occasion</Key>
-<Value>Jamuhuri</Value>
-</ReferenceItem>
-</ReferenceData>
-<Timestamp>20190809145501</Timestamp> //Timestamp
-</Transaction>
-<Identity>
-<Caller>
-<CallerType>2</CallerType>//Constant variable, remains the same
-<ThirdPartyID> </ThirdPartyID>
-<Password>Password0</Password>//Constant variable, remains the same
-<CheckSum>CheckSum0</CheckSum>//Constant variable, remains the same
-<ResultURL>ResultURL0</ResultURL>//Cons tant variable, remains the same
-</Caller>
-<Initiator>
-<IdentifierType>11</IdentifierType>//Constant variable, remains the same
-<Identifier>testAPI</Identifier> //Provided by us
-<SecurityCredential>N2ViMGViMGIxMWExMjE4YzlkNjRlZDlkZDQ2ODA4YTdhMWRjZmUzZDc4ZTJiMTMxZDFiYTBjNDdjZWZhM2ZlYg==</SecurityCredential> //Needs to be encrypted using the step 5.
-<ShortCode>511382</ShortCode> //Shortcode for thebusiness
-</Initiator>
-<PrimaryParty>
-<IdentifierType>4</IdentifierType> //Constant variable, remains the same
-<Identifier>511382</Identifier> //Short code
-<ShortCode>511382</ShortCode> //Short code</PrimaryParty>
-<ReceiverParty>
-<IdentifierType>1</IdentifierType>
-<Identifier>254795877416</Identifier> //MSISDN receiving the money
-<ShortCode>ShortCode1</ShortCode> //Constant variable, remains the same
-</ReceiverParty>
-<AccessDevice>
-<IdentifierType>1</IdentifierType> //Constant variable, remains the same
-<Identifier>Identifier3</Identifier>//Constant variable, remains the same
-</AccessDevice>
-</Identity>
-<KeyOwner>1</KeyOwner> //Constant variable, remains the same
-</request>]]></req:RequestMsg>
+    <req:RequestMsg><![CDATA[
+    <?xml version="1.0" encoding="UTF-8"?>
+        <request xmlns:"http://192.168.9.48:8310/mminterface/request">
+            <Transaction>
+                <CommandID>PromotionPayment</CommandID>
+                <LanguageCode></LanguageCode>
+                <OriginatorConversationID>90293269</OriginatorConversationID>
+                <ConversationID></ConversationID>
+                <Remark></Remark>
+                    <Parameters>
+                        <!--parameter1-->
+                        <Parameter>
+                            <Key>Amount</Key>
+                            <Value>1</Value>
+                        </Parameter>
+                         <!--parameter2-->
+                    </Parameters>
+                    <ReferenceData>
+                        <ReferenceData>
+                            <ReferenceItem>
+                                <Key>QueueTimeoutURL</Key>
+                                <Value>http://10.66.49.789:7888/new</Value>
+                            </ReferenceItem>
+                            <ReferenceItem>
+                                <Key>Occasion</Key>
+                                <Value>Jamuhuri</Value>
+                            <ReferenceItem>
+                        </ReferenceData>
+                        <Timestamp>20190809160101</Timestamp>
+            </Transaction>
+            <Identity>
+                <Caller>
+                    <CallerType>2</CallerType>
+                    <ThirdPartyID></ThirdPartyID>
+                    <Password></Password>
+                    <CheckSum></CheckSum>
+                    <ResultURL>ResultURL</ResultURL>
+                </Caller>
+                <Initiator>
+                    <IdentifierType>11</IdentifierType>
+                    <Identifier>testAPI</Identifier>
+                    <SecurityCredential>YTlkNzAyOTNmNzM5MTdlMTk3ZTljOTQ3ODEwOWJkOWZhNTY4N2M2OGY4OTMyMTU2YzAxZDk5ODczZDE4Y2FkYg==</SecurityCredential>
+                    <ShortCode>511382</ShortCode>
+                </Initiator>
+                <PrimaryParty>
+                    <IdentifierType>4</IdentifierType>
+                    <Identifier>511382</Identifier>
+                    <ShortCode>511382</ShortCode>
+                </PrimaryParty>
+                <ReceiverParty>
+                    <IdentifierType>1</IdentifierType>
+                    <Identifier>254795877416</Identifier>
+                    <ShortCode>511382</ShortCode>
+                <ReceiverParty>
+                <AccessDevice>
+                    <IdentifierType>1</IdentifierType>
+                    <Identifier>GalaxyS9+</Identifier>
+                </AccessDevice>
+            </Identifier>
+            <KeyOwner>1</KeyOwner>
+        </request>]]>
+    </req:RequestMsg>
 </soapenv:Body>
 </soapenv:Envelope>
 ';
