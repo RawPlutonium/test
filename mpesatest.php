@@ -1,7 +1,7 @@
 <?php
 $url = "http://192.168.9.48:8310/mminterface/request/";
 
-$xml_data = "
+$xml_data = '
 <soapenv:Envelope 
 xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" 
 xmlns:req=$url>
@@ -78,7 +78,7 @@ xmlns:req=$url>
 </request>]]></req:RequestMsg>
 </soapenv:Body>
 </soapenv:Envelope>
-";
+';
 
 
 $ch = curl_init($url);
