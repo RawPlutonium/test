@@ -88,5 +88,5 @@ curl_setopt($ch, CURLOPT_POSTFIELDS, "$xml_data");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 $output = curl_exec($ch);
 curl_close($ch);
-file_put_contents("result.txt", $output);
+print_r($output);
 ?>

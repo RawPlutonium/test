@@ -1,0 +1,12 @@
+<soapenv:Envelope
+xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+xmlns:req="http://192.168.9.48:8310/mminterface/request">
+
+<soapenv:Header>
+
+    <tns:RequestSOAPHeader xmlns:tns="http://www.huawei.com.cn/schema/common/v2_1">
+        <tns:spId>107031</tns:spId>
+        <tns:spPassword>Safaricom123!</tns:spPassword>
+        <tns:serviceId>107031000<tns:serviceId>
+        <tns:timeStamp>20190809160101</tns:timeStamp>
+    </tns:RequestSOAPHeader>
