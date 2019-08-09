@@ -9,10 +9,10 @@ xmlns:req=$url>
 <tns:RequestSOAPHeader xmlns:tns="http://www.huawei.com.cn/schema/common/v2_1">
 <tns:spId>107031</tns:spId> 
 //SPid, provided by us
-<tns:spPassword>ZGY3NjNlNTIxNmJlMjQ1MDU3Yzc0OWE4NzM1ZTY3NzAwOWFhYmI1ZDk3YTg4ZjNiNzlmYTRlMjY5ZDFlMzFmYg==</tns:spPassword> 
+<tns:spPassword>N2ViMGViMGIxMWExMjE4YzlkNjRlZDlkZDQ2ODA4YTdhMWRjZmUzZDc4ZTJiMTMxZDFiYTBjNDdjZWZhM2ZlYg==</tns:spPassword> 
 //Password, provided by us. Encrypted using Base64(sha256(SPid+Password+Timestamp))
 <tns:serviceId>107031000</tns:serviceId> //Service id, provided by us
-<tns:timeStamp>20190808201801</tns:timeStamp> //Timestamp, in format yyyymmddhhmmss
+<tns:timeStamp>20190809145501</tns:timeStamp> //Timestamp, in format yyyymmddhhmmss
 </tns:RequestSOAPHeader>
 </soapenv:Header>
 <soapenv:Body>
@@ -44,7 +44,7 @@ xmlns:req=$url>
 <Value>Jamuhuri</Value>
 </ReferenceItem>
 </ReferenceData>
-<Timestamp>2019-08-08T20:18:01.2109675Z</Timestamp> //Timestamp
+<Timestamp>20190809145501</Timestamp> //Timestamp
 </Transaction>
 <Identity>
 <Caller>
@@ -57,7 +57,7 @@ xmlns:req=$url>
 <Initiator>
 <IdentifierType>11</IdentifierType>//Constant variable, remains the same
 <Identifier>testAPI</Identifier> //Provided by us
-<SecurityCredential>NDkwMzY5ZDU4NGVjZDIwNjc4OWNlYTdmZGI2MjM2NzNlYjk5ZTZlZDIzYzJlMjc1YzcwNDAwMjVkN2Q0ZmNhZg==</SecurityCredential> //Needs to be encrypted using the step 5.
+<SecurityCredential>N2ViMGViMGIxMWExMjE4YzlkNjRlZDlkZDQ2ODA4YTdhMWRjZmUzZDc4ZTJiMTMxZDFiYTBjNDdjZWZhM2ZlYg==</SecurityCredential> //Needs to be encrypted using the step 5.
 <ShortCode>511382</ShortCode> //Shortcode for thebusiness
 </Initiator>
 <PrimaryParty>
