@@ -5,7 +5,7 @@ $xml_data = '
 <soapenv:Envelope
 xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
 xmlns:req="http://192.168.9.48:8310/mminterface/request">
-<!--soap header-->
+
 <soapenv:Header>
 
     <tns:RequestSOAPHeader xmlns:tns="http://www.w3.org/2001/XMLSchema">
@@ -16,7 +16,6 @@ xmlns:req="http://192.168.9.48:8310/mminterface/request">
     </tns:RequestSOAPHeader>
 </soapenv:Header>
 
-<!--soap body-->
 <soapenv:Body>
     <req:RequestMsg><![CDATA[
     <?xml version="1.0" encoding="UTF-8"?>
@@ -28,12 +27,10 @@ xmlns:req="http://192.168.9.48:8310/mminterface/request">
                 <ConversationID></ConversationID>
                 <Remark></Remark>
                     <Parameters>
-                        <!--parameter1-->
                         <Parameter>
                             <Key>Amount</Key>
                             <Value>1</Value>
                         </Parameter>
-                         <!--parameter2-->
                     </Parameters>
                     <ReferenceData>
                         <ReferenceData>
