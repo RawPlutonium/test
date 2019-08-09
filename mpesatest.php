@@ -8,7 +8,7 @@ xmlns:req="http://192.168.9.48:8310/mminterface/request">
 <!--soap header-->
 <soapenv:Header>
 
-    <tns:RequestSOAPHeader xmlns:tns="http://www.huawei.com.cn/schema/common/v2_1">
+    <tns:RequestSOAPHeader xmlns:tns="http://www.w3.org/2001/XMLSchema">
         <tns:spId>107031</tns:spId>
         <tns:spPassword>ZGVjMGI0Nzg4YzhiMTIwZGIxNmFiODFlMDFhYTAwMGUyZTc5ZjY4OWMxOTQwMThiMDZlNTgyMDQ0MWI4ZDdmMQ==</tns:spPassword>
         <tns:serviceId>107031000<tns:serviceId>
