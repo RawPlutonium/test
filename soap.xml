@@ -1,6 +1,6 @@
 <soapenv:Envelope
 xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
-xmlns:req="http://192.168.9.48:8310/mminterface/request">
+xmlns:req="http://api-v1.gen.mm.vodafone.com/mminterface/request"">
 
 <soapenv:Header>
 
@@ -14,7 +14,7 @@ xmlns:req="http://192.168.9.48:8310/mminterface/request">
 <soapenv:Body>
     <req:RequestMsg><![CDATA[
     <?xml version="1.0" encoding="UTF-8"?>
-        <request xmlns:"http://192.168.9.48:8310/mminterface/request">
+        <request xmlns:"http://api-v1.gen.mm.vodafone.com/mminterface/request">
             <Transaction>
                 <CommandID>PromotionPayment</CommandID>
                 <LanguageCode></LanguageCode>

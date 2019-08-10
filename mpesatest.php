@@ -4,22 +4,21 @@ $url = "http://192.168.9.48:8310/mminterface/request/";
 $xml_data = '
 <soapenv:Envelope
 xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
-xmlns:req="http://192.168.9.48:8310/mminterface/request">
+xmlns:req="http://api-v1.gen.mm.vodafone.com/mminterface/request"">
 
 <soapenv:Header>
 
-    <tns:RequestSOAPHeader xmlns:tns="http://www.w3.org/2001/XMLSchema">
+    <tns:RequestSOAPHeader xmlns:tns="http://www.huawei.com.cn/schema/common/v2_1">
         <tns:spId>107031</tns:spId>
         <tns:spPassword>ZGVjMGI0Nzg4YzhiMTIwZGIxNmFiODFlMDFhYTAwMGUyZTc5ZjY4OWMxOTQwMThiMDZlNTgyMDQ0MWI4ZDdmMQ==</tns:spPassword>
         <tns:serviceId>107031000<tns:serviceId>
         <tns:timeStamp>20190809160101</tns:timeStamp>
     </tns:RequestSOAPHeader>
 </soapenv:Header>
-
 <soapenv:Body>
     <req:RequestMsg><![CDATA[
     <?xml version="1.0" encoding="UTF-8"?>
-        <request xmlns:"http://192.168.9.48:8310/mminterface/request">
+        <request xmlns:"http://api-v1.gen.mm.vodafone.com/mminterface/request">
             <Transaction>
                 <CommandID>PromotionPayment</CommandID>
                 <LanguageCode></LanguageCode>
@@ -27,10 +26,12 @@ xmlns:req="http://192.168.9.48:8310/mminterface/request">
                 <ConversationID></ConversationID>
                 <Remark></Remark>
                     <Parameters>
+                  
                         <Parameter>
                             <Key>Amount</Key>
                             <Value>1</Value>
                         </Parameter>
+                     
                     </Parameters>
                     <ReferenceData>
                         <ReferenceData>
