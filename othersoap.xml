@@ -1,7 +1,3 @@
-<?php
-$url = "http://192.168.9.48:8310/mminterface/request/";
-
-$xml_data = '
 <soapenv:Envelope 
 xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" 
 xmlns:req="http://api-v1.gen.mm.vodafone.com/mminterface/request">
@@ -16,7 +12,7 @@ xmlns:tns="http://www.huawei.com/schema/osg/common/v2_1">
 </soapenv:Header>
 <soapenv:Body>
 <req:RequestMsg>
-<![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<![CDATA[<?xml version='1.0' encoding='UTF-8'?>
 <Request xmlns="http://api-v1.gen.mm.vodafone.com/mminterface/request">
 <Transaction>
 <CommandID>BusinessPayment</CommandID>
@@ -76,15 +72,3 @@ xmlns:tns="http://www.huawei.com/schema/osg/common/v2_1">
 </req:RequestMsg>
 </soapenv:Body>
 </soapenv:Envelope>
-';
-
-
-$ch = curl_init($url);
-curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: text/xml'));
-curl_setopt($ch, CURLOPT_POST, 1);
-curl_setopt($ch, CURLOPT_POSTFIELDS, "$xml_data");
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-$output = curl_exec($ch);
-curl_close($ch);
-print_r($output);
-?>
