@@ -21,7 +21,7 @@ xmlns:tns="http://www.huawei.com/schema/osg/common/v2_1">
 <Transaction>
 <CommandID>BusinessPayment</CommandID>
 <LanguageCode></LanguageCode>
-<OriginatorConversationID>${=java.util.UUID.randomUUID()}</OriginatorConversationID>
+<OriginatorConversationID>7872348</OriginatorConversationID>
 <ConversationID></ConversationID>
 <Remark>0</Remark>
 <Parameters>
